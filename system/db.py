@@ -71,7 +71,7 @@ class VectorDatabase:
             raise ValueError("Must provide either 'documents' or 'source_path'")
 
     def query(
-        self, query_texts: List[str], n_results: int = 5, where: Optional[Dict] = None
+        self, query_texts: List[str], n_results: int = 3, where: Optional[Dict] = None
     ) -> Dict:
         return self.collection.query(
             query_texts=query_texts, n_results=n_results, where=where
